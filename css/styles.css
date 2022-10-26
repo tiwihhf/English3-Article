@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/bookman-old-style');
+
 * {
   margin:0;
   padding:0;
@@ -7,6 +9,11 @@
 body {
   max-width:100%;
   display:grid;
+}
+
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:350;
 }
 
 /* SECTION 1: HEADER */
@@ -20,10 +27,10 @@ header {
 }
 
 #logo {
+  display:flex;
   justify-content:center;
   align-items:center;
   height:65%;
-  padding:1em;
   border-bottom:0.5px solid #d3d3d3;
 }
 
@@ -34,20 +41,14 @@ header {
   list-style:none;
 }
 
-#logo {
-  display:flex;
-  align-items:center;
-}
-
 #logo img {
-  height:25px;
+  height:10vh;
 }
 
 #navbar li {
   width:100%;
   padding:0.4em;
   text-align:center;
-
 }
 
 /* SECTION 2: BODY ARTICLE */
@@ -75,12 +76,21 @@ article img {
   object-fit:cover;
 }
 
+#title {
+  font-family: 'Bookman Old Style', sans-serif;                      
+}
+
+.cross-out {
+  text-decoration:line-through;
+}
+
 .para-indent {
   margin-left:2.5em;
 }
 
 .article-numberings {
   padding-top:1em;
+  font-family:"Bookman Old Style", 'Times New Roman', Times, serif;
 }
 
 .transition {
@@ -89,8 +99,26 @@ article img {
 
 aside {
   display:flex;
-  justify-content:center;
+  row-gap:3em;
+  flex-direction:column;
+  justify-content:start;
+  align-items:center;
+  text-align:left;
   align-items:start;
+}
+
+aside img {
+  width:100%;
+  min-height:auto;
+  max-height:230px;
+  object-fit:cover;
+}
+
+aside p {
+  text-align:center;
+  color:#fff;
+  padding:1em;
+  background-color:#000;
 }
 
 #promotion {
@@ -102,6 +130,9 @@ aside {
 /* SECTION 3: FOOTER */
 footer {
   display:flex;
+  flex-direction:column;
+  row-gap:0.5em;
+  color:#fff;
   background-color:#000;
   justify-content:center;
   align-items:center;
@@ -109,4 +140,11 @@ footer {
   min-height:5em;
   width:100vw;
   border:1px solid #000;
+}
+
+#footer-note {
+  color:#313030;
+  text-align:center;
+  font-size:12px;
+  font-style:italic;
 }
